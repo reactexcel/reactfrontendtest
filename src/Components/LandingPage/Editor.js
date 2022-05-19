@@ -46,6 +46,9 @@ useEffect(()=>{
         onEditorStateChange={onEditorStateChange}
         toolbar={{
           options: ['inline', 'list'],
+          inline: {
+            options: ['bold', 'italic'],
+          },
           blockType: {
             inDropdown: false,
             options: ['bold', 'italic'],
