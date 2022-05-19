@@ -25,6 +25,14 @@ const MyEditor = ({setEditorTextLength, editorTextLength }) => {
     let EnterText = editor.getCurrentContent().getPlainText('').length
     setEditorTextLength(EnterText)
 }
+const onEditorStateChange = (editorState) => {
+    const text =  editor.getCurrentContent().getPlainText('')
+    if ( text.length <1500) {
+      setEditor(editorState)
+    } else {
+       return 'handled'
+    }
+  }
 useEffect(()=>{
  handleReturnTextlength() 
 },[editor])
@@ -35,7 +43,7 @@ useEffect(()=>{
         toolbarClassName='toolbar-class'
         wrapperClassName='demo-wrapper'
         editorClassName='demo-editor'
-        onEditorStateChange={setEditor}
+        onEditorStateChange={onEditorStateChange}
         toolbar={{
           options: ['inline', 'list'],
           blockType: {
