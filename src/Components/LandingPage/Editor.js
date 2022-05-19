@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { EditorState, convertToRaw } from 'draft-js';
+import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { makeStyles } from '@mui/styles';
-import draftToHtml from "draftjs-to-html";
+
 const useStyles = makeStyles({
   root: {
     '& .rdw-editor-wrapper': {
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     },
   },
 });
-const MyEditor = ({setEditorTextLength, editorTextLength }) => {
+const MyEditor = ({setEditorTextLength }) => {
   const classes = useStyles();
   const [editor, setEditor] = useState(EditorState.createEmpty());
   

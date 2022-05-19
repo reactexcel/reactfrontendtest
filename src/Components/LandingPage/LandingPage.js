@@ -66,7 +66,7 @@ const LandingPage = () => {
         />
         </div>
         <div className={classes.mainDiv}>
-        <MyEditor editorTextLength={editorTextLength} setEditorTextLength={setEditorTextLength}/>
+        <MyEditor setEditorTextLength={setEditorTextLength}/>
         </div>
         <div className='d-flex justify-content-between'>
         <span>Journal: Social dokumentation</span>
