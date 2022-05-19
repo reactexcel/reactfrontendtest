@@ -21,14 +21,12 @@ const MyEditor = ({setEditorTextLength, editorTextLength }) => {
   const classes = useStyles();
   const [editor, setEditor] = useState(EditorState.createEmpty());
   
-  let EditorArray= draftToHtml(convertToRaw(editor.getCurrentContent()));
   const handleReturnTextlength=()=>{
-    let EnterText = EditorArray.replace(/<\/{0,1}[a-z]+>/gi, "").length
-  console.log("sfdfdss",editor.getCurrentContent())
+    let EnterText = editor.getCurrentContent().getPlainText('').length
     setEditorTextLength(EnterText)
 }
 useEffect(()=>{
-handleReturnTextlength() 
+ handleReturnTextlength() 
 },[editor])
   return (
     <div className={classes.root}>

@@ -70,7 +70,7 @@ const LandingPage = () => {
         </div>
         <div className='d-flex justify-content-between'>
         <span>Journal: Social dokumentation</span>
-        <span>{editorTextLength==1?0:editorTextLength}/1500</span>
+        <span>{editorTextLength}/1500</span>
         </div>
         <div className={classes.buttongroup}>
         <Button variant="contained" className={classes.buttonVeiw}>VERKSTADEN</Button>
